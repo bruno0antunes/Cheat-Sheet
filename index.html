@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Sheet</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+
+<body>
+    <h1>HTML</h1>
+    
+    <table>
+        <tr>
+            <th>Tag/ Attribute</th>
+            <th>Description</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td><code>&amp;lt;</code> and <code>&amp;gt;</code></td>
+            <td>Displays <code>&lt;</code> and <code>&gt;</code>, respectively.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&amp;nbsp;</code></td>
+            <td>Allows for empty table cells without breaking formatting.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&amp;amp;</code></td>
+            <td>Displays the character &amp; without the browser assuming it's code.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+            <td>Anchor tag. For linking to other sites or within the page.</td>
+            <td><code>href="link"</code> used inside the opening tag, while name of the hyperlink in between.<br>
+            In order to link using an image, the above applies, but the image is linked using <code>&lt;img src="link"&gt;</code> followed by text, if desired.<br>
+            In order to link to any section of the same page, <code>href=#id</code> is used inside the opening tag.<br>
+            <code>target="_blank"</code> can be used inside the opening tag in order to open the link in a new tab.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;br&gt;</code></td>
+            <td>Line break.</td>
+            <td>Creates a paragraph.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;!-- text --&gt;</code></td>
+            <td>For creating a comment within the editor.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&lt;ol&gt;&lt;/ol&gt;</code></td>
+            <td>Ordered list.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&lt;ul&gt;&lt;/ul&gt;</code></td>
+            <td>Unordered list.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&lt;li&gt;&lt;/li&gt;</code></td>
+            <td>Individual list elements used within ordered and unordered tags.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&lt;em&gt;&lt;/em&gt;</code></td>
+            <td>Italics.</td>
+            <td>Inline.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;strong&gt;&lt;/strong&gt;</code></td>
+            <td>Bold.</td>
+            <td>Inline.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;table&gt;&lt;/table&gt;</code></td>
+            <td>Main table container.</td>
+            <td>Semantical (Probably lmao).</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tbody&gt;&lt;/tbody&gt;</code></td>
+            <td>Table body. Parent to <code>&lt;tr&gt;</code></td>
+            <td>Semantical.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;thead&gt;&lt;/thead&gt;</code></td>
+            <td>Table heading.</td>
+            <td>Semantical.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tfoot&gt;&lt;/tfoot&gt;</code></td>
+            <td>Table footing.</td>
+            <td>Semantical.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tr&gt;&lt;/tr&gt;</code></td>
+            <td>Starts a new table row.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>&lt;th&gt;&lt;/th&gt;</code></td>
+            <td>Table heading cells.</td>
+            <td>Subordinate to <code>&lt;tr&gt;</code></td>
+        </tr>
+        <tr>
+            <td><code>&lt;td&gt;&lt;/td&gt;</code></td>
+            <td>Individual table cells pertaining to each row.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>rowspan="1"</code></td>
+            <td>Attribute of <code>&lt;td&gt;</code>. Collapses a cell vertically by however much the value is.</td>
+            <td>Default value of <code>1</code>.</td>
+        </tr>
+        <tr>
+            <td><code>colspan="1"</code></td>
+            <td>Attribute of <code>&lt;td&gt;</code>. Collapses a cell horizontally by however much the value is</td>
+            <td>Default value of <code>1</code>.</td>
+        </tr>
+        <tr>
+            <td><code>&lt;style&gt;&lt;/style&gt;</code></td>
+            <td>Allows to apply CSS code within the html file. 
+                Only useful if the website has only one page (thus 1 html file).</td>
+            <td>Must be included within the <code>&lt;head&gt;</code> of the document.</td>
+        </tr>
+        <tr>
+            <td colspan="3"><h2>Helpful notes</h2></td>
+        </tr>
+        <tr>
+            <td colspan="3">More than one stylesheet can be imported by using a separate link element for each.</td>
+        </tr>
+    </table>
+    
+    <h1>CSS</h1>
+    
+    <table>
+        <tr>
+            <th>Selector/ Attribute</th>
+            <th>Description</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td><code>* {}</code></td>
+            <td>Universal selector. Targets all elements of the page.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>#id {}</code></td>
+            <td>Id selector. Targets the elements with that particular id name.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>li&gt;a {}</code></td>
+            <td>Child selector. In this example, all <code>&lt;a&gt;</code> elements which are children of <code>&lt;li&gt;</code> elements are targeted.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>p a {}</code></td>
+            <td>Space is used as a descendant selector. <code>&lt;a&gt;</code> elements nested within <code>&lt;p&gt;</code> elements are targeted.</td>
+            <td>Broader than <code>&gt;</code>, above.</td>
+        </tr>
+        <tr>
+            <td><code>h3.class {}</code></td>
+            <td>Selects elements which are <strong>both</strong> <code>h3</code> and <code>.class</code>.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>h1+p {}</code></td>
+            <td>Adjacent sibling selector. Targets the first, and only the first, <code>&lt;p&gt;</code> after an <code>&lt;h1&gt;</code> element.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>h1-p {}</code></td>
+            <td>General sibling selector. Targets all <code>&lt;p&gt;</code> siblings of <code>&lt;h1&gt;</code> elements.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>inherit;</code></td>
+            <td>Used after any property to match the same property value of the parent element.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>min-width:</code></td>
+            <td>Minimum width.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>max-width:</code></td>
+            <td>Maximum width.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>min-height:</code></td>
+            <td>Minimum height.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>max-height:</code></td>
+            <td>Maximum height.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>overflow:</code></td>
+            <td>Dictates how content of the box should behave if it doesn't fit in the browser window.</td>
+            <td>Can assume values <code>hidden</code> or <code>scroll</code>.</td>
+        </tr>
+        <tr>
+            <td><code>border-width:</code></td>
+            <td>Four values clockwise from top.</td>
+            <td>Values can be stated in <code>px</code> or <code>thin</code>, <code>medium</code>, <code>thick</code>.</td>
+        </tr>
+        <tr>
+            <td><code>border-top-width:</code></td>
+            <td>Used in order to define the thickness of any one side of the box individually.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>border-color:</code></td>
+            <td>Four values as above.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>border-top-color:</code></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td rowspan="10"><code>border-style:</code></td>
+            <td class="duh", colspan="2"><strong>Can take up the following values:</strong></td>
+        </tr>
+        <tr>
+            <td><code>solid</code></td>
+            <td id="solid">A single solid line.</td>
+        </tr>
+        <tr>
+            <td><code>dotted</code></td>
+            <td id="dotted">Squares with the same width as the border.</td>
+        </tr>
+        <tr>
+            <td><code>dashed</code></td>
+            <td id="dashed">Series of short lines.</td>
+        </tr>
+        <tr>
+            <td><code>double</code></td>
+            <td id="double">Two solid lines. The total thickness mediated by the <code>border-width</code> value.</td>
+        </tr>
+        <tr>
+            <td><code>groove</code></td>
+            <td id="groove">Appears to be carved into the page.</td>
+        </tr>
+        <tr>
+            <td><code>ridge</code></td>
+            <td id="ridge">Appears to stick out from the page.</td>
+        </tr>
+        <tr>
+            <td><code>inset</code></td>
+            <td id="inset">Appears embedded into the page.</td>
+        </tr>
+        <tr>
+            <td><code>outset</code></td>
+            <td id="outset">Looks like it is coming out of the screen.</td>
+        </tr>
+        <tr>
+            <td><code>hidden</code> / <code>none</code></td>
+            <td id="hidden">No border shown.</td>
+        </tr>
+        <tr>
+            <td><code>border:</code></td>
+            <td>Shorthand way of defining border width, style and color at once.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>border-top-style:</code></td>
+            <td>Used to individually change border styles.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>padding-top:</code></td>
+            <td>Defining padding of individual borders of boxes using <code>px</code>, etc.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>padding:</code></td>
+            <td>Shorthand form. Can take four clockwise values or two (sides and top-bottom).</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>margin-top:</code></td>
+            <td>Defining margins of individual borders of boxes using <code>px</code>, etc.</td>
+            <td rowspan="2">Margins are collapsed, i.e. the margin with the highest value sets the margin betweent two boxes.<br>
+            Setting the left and right margins to <code>auto</code> centers the box within the page.</td>
+        </tr>
+        <tr>
+            <td><code>margin:</code></td>
+            <td>Shorthand form. Can take four clockwise values or two (sides and top-bottom).</td>
+        </tr>
+        <tr>
+            <td><code>display:</code></td>
+            <td>This property can take four values:
+            <ul>
+                <li><code>inline</code> causes a block level element to behave as inline.</li>
+                <li><code>block</code> causes an inline level element to behave as block.</li>
+                <li><code>inline-block</code> causes a block level element to behave as inline while retaining the properties of a block element.</li>
+                <li><code>none</code> hides the element. In this case, the box is visible only in the source code but invisible in the browser.</li>
+            </ul></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>visibility: hidden</code></td>
+            <td>This is used in order to hide an element but leave the space that it would otherwise occupy.</td>
+            <td><code>visible</code> is the default value.</td>
+        </tr>
+        <tr>
+            <td><code>border-image: url("...")</code></td>
+            <td>This property allows to set an image as the border of a box.<br>
+            Four values are required after the link to set the width of each border, followed by one of three values:<br>
+            <ul>
+                <li><code>stretch</code> stretches the image accross the lenght of the border.</li>
+                <li><code>repeat</code> repeats the image accross the lenght of the border.</li>
+                <li><code>round</code> similar to <code>repeat</code> but scales the tile image for a perfect fit.</li>
+            </ul></td>
+            <td>Example in use: <code>border-image: url("...") 10 9 10 9 round;</code>.<br>
+             <code>-moz-border-image:</code> and <code>-webkit-border-image:</code> can be used for browser compatibility.</td>
+        </tr>
+        <tr>
+            <td><code>box-shadow:</code></td>
+            <td>Creates a shadow around the box. Takes in four numerical values, positive or negative, followed by the color of the shadow.<br>
+            The numerical values determine, in order: horizontal offset, vertical offset, blur distance and the spread of the shadow.<br>
+            <code>inset</code> can be used before the numerical values in order to create an inner-shadow.</td>
+            <td><code>-moz-border-image:</code> and <code>-webkit-border-image</code> can be used for browser compatibility.</td>
+        </tr>
+        <tr>
+            <td><code>border-radius:</code></td>
+            <td>Rounds the corners of the border. In order to target individual corners, the format <code>border-top-right-radius:</code> can be used.<br>
+            Shorthand form is accepted. In order to create an eliptical shape the following shorthand could be used 
+            <code>10 10 10 10 / 5 5 5 5;</code> where 10 defines the horizontal values and 5 the vertical.<br>
+            A circle shape can be created by setting the corner values equal to the height of the box.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>position:</code></td>
+            <td>Accepts the following values:<br>
+            <ul>
+                <li><code>static</code> normal flow, the default value.</li>
+                <li><code>relative</code> flow relative to what it would've been by default.</li>
+                <li><code>absolute</code> takes the box out of normal flow, other boxes ignore its positioning.</li>
+                <li><code>fixed</code> positions the box relative to the browser window.</li>
+            </ul></td>
+            <td>Offset values are used in tandem in order to place the box where needed. Those take the form of <code>top</code>, <code>right</code>, <code>left</code> and <code>bottom</code> along with general values.</td>
+        </tr>
+        <tr>
+            <td><code>z-index:</code></td>
+            <td>Used in situations where boxes can overlap. Takes in whole numbers, where a higher value places the box higher up.</td>
+            <td>When boxes overlap, the default behaviour is for the later html code be placed higher up.</td>
+        </tr>
+        <tr>
+            <td><code>float:</code></td>
+            <td>This property is used in order to place the box as far to the left or right as possible. Other elements flow around it. A <code>width</code> should be specified as well.<br>
+            Possible values are <code>right</code> and <code>left</code>.</td>
+            <td>On some browsers, in cases where a parent element contains only floated elements, it can collapse, ruining the layout. 
+                In order to fix this the following parameters can be set <code>overflow: auto;</code> and <code>width: 100%;</code>.</td>
+        </tr>
+        <tr>
+            <td><code>clear:</code></td>
+            <td>This property is used in order to control the way boxes stack <strong>within the same containing element</strong>.<br>
+            The possible values it can take are:<br>
+            <ul>
+                <li><code>left</code> the left-hand side of the box should not touch any other elements.</li>
+                <li><code>right</code> the right-hand side of the box should not touch any other elements.</li>
+                <li><code>both</code> neither side of the box should touch another element.</li>
+                <li><code>none</code> both sides can touch other elements.</li>
+            </ul></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>font-size:</code></td>
+            <td>Sets size of the font.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>background-color:</code></td>
+            <td>Sets the background color for the element.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>color:</code></td>
+            <td>Sets the foreground color. Or text color if that's the case.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>opacity:</code></td>
+            <td>Sets the opacity, from <code>0</code> to <code>1</code>.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>font-weight:</code></td>
+            <td>Selects how thick the font should be. Values can be either <code>normal</code> or <code>bold</code>, or numerical values ranging from 
+                <code>100</code>-<code>900</code> in multiples of <code>100</code>. 
+                The default value is <code>400</code>.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>text-align:</code></td>
+            <td>Sets the text alignment. Values can be <code>left</code>, <code>center</code> or <code>right</code>.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>background-image:</code></td>
+            <td>Sets a background image using <code>url("...")</code>.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>font-family:</code></td>
+            <td>Selects the font type. In the case of a multi-word font name, "" should be used. Fonts can be separated by a comma, as fallback options.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>font-style: italic;</code></td>
+            <td>Used to set a font to <em>italic</em>.</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><code>@font-face {<br>
+                   font-family: "name of the font";<br>
+                src: url("...") format("truetype");<br>
+            }</code></td>
+            <td>Used in order to import a font to be used later on.</td>
+            <td>Fonts can also be linked in html. The code should sit in the head section and is as follows:<br>
+             <code>&lt;link href="..." rel="stylesheet"&gt;</code>.</td>
+        </tr>
+        <tr>
+            <td><code>line-height:</code></td>
+            <td>Determines the spacing between lines of text. Values can be in <code>px</code> or whole numbers signifying the ratio against the height of the font.</td>
+            <td><code>line-height: 3;</code> would result in a line spacing 3 times as large as the font height.</td>
+        </tr>
+        <tr>
+            <td colspan="3"><h2>Helpful notes</h2></td>
+        </tr>
+        <tr>
+            <td colspan="3">More than one stylesheet can be imported by using <code>@import url("...")</code> before any other rules.</td>
+        </tr>
+        <tr>
+            <td colspan="3">When specifying colors in RGB values, a fourth number can be used which determines opacity, from <code>0</code>-<code>1</code>.</td>
+        </tr>
+    </table>
+    
+    <h1>Other notes</h1>
+    <h4>In linking to path files, <code>./</code> at the start of the url points to the current location within the folder.</h4>
+
+</body>
+
+</html>
